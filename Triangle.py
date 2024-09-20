@@ -14,7 +14,7 @@ def classify_triangle(a, b, c):
     
     # Check for right triangle
     sides = sorted([a, b, c])
-    if sides[0]**2 + sides[1]**2 == sides[2]**2:
+    if round(a**2 + b**2, 5) == round(c**2, 5) or round(b**2 + c**2, 5) == round(a**2, 5) or round(a**2 + c**2, 5) == round(b**2, 5):
         return f"{triangle_type}, right"
     
     return triangle_type
